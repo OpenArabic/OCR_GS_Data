@@ -19,7 +19,7 @@ MODEL="~/.config/kraken/arabic-beirut.clstm"
 python $SCRIPTPATH/eval.py $MODEL $SCRIPTPATH/$1/$FOLDER
 cat $SCRIPTPATH/$1/$FOLDER/*.gt.txt > $SCRIPTPATH/$1/g_$VAR.txt
 cat $SCRIPTPATH/$1/$FOLDER/*.rec.txt > $SCRIPTPATH/$1/r_$VAR.txt
-ocrevalutf8 accuracy $SCRIPTPATH/$1/g_a.txt $SCRIPTPATH/$1/r_$VAR.txt > $SCRIPTPATH/$1/report_$VAR.txt
+ocrevalutf8 accuracy $SCRIPTPATH/$1/g_$VAR.txt $SCRIPTPATH/$1/r_$VAR.txt > $SCRIPTPATH/$1/report_$VAR.txt
 echo $SCRIPTPATH/$1/$FOLDER": folder has been processed!"
 
 # run b
@@ -30,7 +30,7 @@ MODEL="~/.config/kraken/arabic-beirut.clstm"
 python $SCRIPTPATH/eval.py $MODEL $SCRIPTPATH/$1/$FOLDER
 cat $SCRIPTPATH/$1/$FOLDER/*.gt.txt > $SCRIPTPATH/$1/g_$VAR.txt
 cat $SCRIPTPATH/$1/$FOLDER/*.rec.txt > $SCRIPTPATH/$1/r_$VAR.txt
-ocrevalutf8 accuracy $SCRIPTPATH/$1/g_a.txt $SCRIPTPATH/$1/r_$VAR.txt > $SCRIPTPATH/$1/report_$VAR.txt
+ocrevalutf8 accuracy $SCRIPTPATH/$1/g_$VAR.txt $SCRIPTPATH/$1/r_$VAR.txt > $SCRIPTPATH/$1/report_$VAR.txt
 echo $SCRIPTPATH/$1/$FOLDER": folder has been processed!"
 
 # run a_200
@@ -41,7 +41,7 @@ MODEL="~/.config/kraken/arabic-beirut-200.clstm"
 python $SCRIPTPATH/eval.py $MODEL $SCRIPTPATH/$1/$FOLDER
 cat $SCRIPTPATH/$1/$FOLDER/*.gt.txt > $SCRIPTPATH/$1/g_$VAR.txt
 cat $SCRIPTPATH/$1/$FOLDER/*.rec.txt > $SCRIPTPATH/$1/r_$VAR.txt
-ocrevalutf8 accuracy $SCRIPTPATH/$1/g_a.txt $SCRIPTPATH/$1/r_$VAR.txt > $SCRIPTPATH/$1/report_$VAR.txt
+ocrevalutf8 accuracy $SCRIPTPATH/$1/g_$VAR.txt $SCRIPTPATH/$1/r_$VAR.txt > $SCRIPTPATH/$1/report_$VAR.txt
 echo $SCRIPTPATH/$1/$FOLDER": folder has been processed!"
 
 # run b_200
@@ -52,7 +52,7 @@ MODEL="~/.config/kraken/arabic-beirut-200.clstm"
 python $SCRIPTPATH/eval.py $MODEL $SCRIPTPATH/$1/$FOLDER
 cat $SCRIPTPATH/$1/$FOLDER/*.gt.txt > $SCRIPTPATH/$1/g_$VAR.txt
 cat $SCRIPTPATH/$1/$FOLDER/*.rec.txt > $SCRIPTPATH/$1/r_$VAR.txt
-ocrevalutf8 accuracy $SCRIPTPATH/$1/g_a.txt $SCRIPTPATH/$1/r_$VAR.txt > $SCRIPTPATH/$1/report_$VAR.txt
+ocrevalutf8 accuracy $SCRIPTPATH/$1/g_$VAR.txt $SCRIPTPATH/$1/r_$VAR.txt > $SCRIPTPATH/$1/report_$VAR.txt
 echo $SCRIPTPATH/$1/$FOLDER": folder has been processed!"
 
 # run 0 --- may not work (too large)
@@ -63,7 +63,7 @@ MODEL="~/.config/kraken/arabic-beirut.clstm"
 python $SCRIPTPATH/eval.py $MODEL $SCRIPTPATH/$1/$FOLDER
 cat $SCRIPTPATH/$1/$FOLDER/*.gt.txt > $SCRIPTPATH/$1/g_$VAR.txt
 cat $SCRIPTPATH/$1/$FOLDER/*.rec.txt > $SCRIPTPATH/$1/r_$VAR.txt
-ocrevalutf8 accuracy $SCRIPTPATH/$1/g_a.txt $SCRIPTPATH/$1/r_$VAR.txt > $SCRIPTPATH/$1/report_$VAR.txt
+ocrevalutf8 accuracy $SCRIPTPATH/$1/g_$VAR.txt $SCRIPTPATH/$1/r_$VAR.txt > $SCRIPTPATH/$1/report_$VAR.txt
 echo $SCRIPTPATH/$1/$FOLDER": folder has been processed!"
 
 # run 0-200 --- may not work (too large)
@@ -74,7 +74,7 @@ MODEL="~/.config/kraken/arabic-beirut-200.clstm"
 python $SCRIPTPATH/eval.py $MODEL $SCRIPTPATH/$1/$FOLDER
 cat $SCRIPTPATH/$1/$FOLDER/*.gt.txt > $SCRIPTPATH/$1/g_$VAR.txt
 cat $SCRIPTPATH/$1/$FOLDER/*.rec.txt > $SCRIPTPATH/$1/r_$VAR.txt
-ocrevalutf8 accuracy $SCRIPTPATH/$1/g_a.txt $SCRIPTPATH/$1/r_$VAR.txt > $SCRIPTPATH/$1/report_$VAR.txt
+ocrevalutf8 accuracy $SCRIPTPATH/$1/g_$VAR.txt $SCRIPTPATH/$1/r_$VAR.txt > $SCRIPTPATH/$1/report_$VAR.txt
 echo $SCRIPTPATH/$1/$FOLDER": folder has been processed!"
 
 echo $SCRIPTPATH/$1": folder has been processed!"
