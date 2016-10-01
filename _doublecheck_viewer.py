@@ -76,6 +76,10 @@ def roundup(x, par):
 def createHTMLs(folder, pref, lines):
     files = os.listdir(folder)
 
+    relFolder = folder.split("/")
+    relFolder = "./"+"/".join(relFolder[-2:])+"/"
+    #input(relFolder)
+
     counter = 0
     table = []
 
@@ -84,7 +88,7 @@ def createHTMLs(folder, pref, lines):
             # <a href="file://C:/path/to/file/file.html">Link Anchor</a>
             href = '<h1>File: %s (if the image is defective, simply delete all Arabic text and the line will be excluded)</h1>'
             head = href % (f[:-4]+'.gt.txt')
-            tags = head + '<p><img src="%s"></p>' % (folder+"/"+f)
+            tags = head + '<p><img src="%s"></p>' % (relFolder+"/"+f)
             text = tags+"<p contenteditable=\"true\" fileNameId=\"%s\">%s</p>" % ((f[:-4]+'.gt.txt'), getText(folder+"/"+f))
             table.append('<tr align="center">%s</tr><hr>' % text)
             counter += 1
@@ -92,7 +96,7 @@ def createHTMLs(folder, pref, lines):
                 fileName = "%s%06d.html" % (pref, counter)
                 corr = fileName[:-5]+"_corrected.html"
                 newHTML = htmlTop.replace(">fileName<", ">"+fileName[:-5]+"_corrected.html<")
-                with open(fileName, "w", encoding="utf8") as f9:
+                with open("./ara/"+fileName, "w", encoding="utf8") as f9:
                     f9.write(newHTML + "\n\n".join(table) + htmlBot)
                 table = []
                 print("%s%06d.html" % (pref, counter))
@@ -102,7 +106,7 @@ def createHTMLs(folder, pref, lines):
     fileName = "%s%06d.html" % (pref, newCount)
     corr = fileName[:-5]+"_corrected.html"
     newHTML = htmlTop.replace(">fileName<", ">"+fileName[:-5]+"_corrected.html<")
-    with open(fileName, "w", encoding="utf8") as f9:
+    with open("./ara/"+fileName, "w", encoding="utf8") as f9:
         f9.write(newHTML + "\n\n".join(table) + htmlBot)
 
 
