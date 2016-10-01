@@ -56,8 +56,8 @@ ocrevalutf8 accuracy $SCRIPTPATH/$1/g_a.txt $SCRIPTPATH/$1/r_$VAR.txt > $SCRIPTP
 echo $SCRIPTPATH/$1/$FOLDER": folder has been processed!"
 
 # run 0 --- may not work (too large)
-VAR=""
-FOLDER="7_final"$VAR
+VAR="all"
+FOLDER="7_final"
 MODEL="~/.config/kraken/arabic-beirut.clstm"
 
 python $SCRIPTPATH/eval.py $MODEL $SCRIPTPATH/$1/$FOLDER
@@ -67,8 +67,8 @@ ocrevalutf8 accuracy $SCRIPTPATH/$1/g_a.txt $SCRIPTPATH/$1/r_$VAR.txt > $SCRIPTP
 echo $SCRIPTPATH/$1/$FOLDER": folder has been processed!"
 
 # run 0-200 --- may not work (too large)
-VAR=""
-FOLDER="7_final"$VAR
+VAR="all_200"
+FOLDER="7_final"
 MODEL="~/.config/kraken/arabic-beirut-200.clstm"
 
 python $SCRIPTPATH/eval.py $MODEL $SCRIPTPATH/$1/$FOLDER
