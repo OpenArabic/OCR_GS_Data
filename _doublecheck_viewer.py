@@ -120,9 +120,9 @@ def processAll():
             print(fol+suf)
             folder = sub+fol+suf
             pref = (os.path.abspath(folder)).split("/")[-2].replace(".","_")
-            pref = "z_"+pref+"_"
+            pref = "z_ALL_"+pref+"_"
             print(pref)
-            createHTMLs(os.path.abspath(folder), pref, 50)    
+            createHTMLs(os.path.abspath(folder), pref, 500)    
 
 processAll()       
         
